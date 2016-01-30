@@ -1,0 +1,32 @@
+.nullPiece,
+.piece{
+	/* padding: 10px; */
+	width: 100%;
+	height: 100%;	
+}
+.piece{
+	background-color: blue !important;	
+	border: 1px solid black;
+}
+._column{
+	border: 1px solid black;
+	background-color: lightgray;
+}
+
+._row{
+	/* border: 1px solid blue; */
+}
+.board{
+	line-height:0px;
+}
+
+.dragEnterOk{
+	background-color:green;
+}
+.dragEnterWrong{
+	background-color:red;
+}
+
+.nextPieces div.board{
+	margin-left: 5px;
+}

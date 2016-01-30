@@ -1,0 +1,31 @@
+{
+  "name": "react1010-clone",
+  "version": "0.1.0",
+  "description": "Clone del juego 1010! para android",
+  "main": "entrypoint.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node entrypoint.js"
+  },
+  "author": "jotapdiez",
+  "dependencies": {
+    "babel-preset-react": "latest",
+    "babelify": "latest",
+    "browserify-middleware": "latest",
+    "express": "latest",
+    "flux": "latest",
+    "keymirror": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "socket.io": "latest",
+    "socket.io-client": "latest"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-plugin-react": "latest",
+    "gulp": "latest",
+    "gulp-eslint": "latest",
+    "gulp-connect": "latest",
+    "reactify": "latest"
+  }
+}
