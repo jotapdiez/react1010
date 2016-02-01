@@ -15,8 +15,6 @@ and then
 $ gulp
 ```
 
-After ´gulp´, the browser is opened automatically with the main page.
-
 The Game
 ========
 ToDo
