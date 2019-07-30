@@ -1,31 +1,31 @@
 {
-  "name": "react1010-clone",
+  "name": "react1010",
   "version": "0.1.0",
-  "description": "Clone del juego 1010! para android",
-  "main": "entrypoint.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node entrypoint.js"
-  },
-  "author": "jotapdiez",
+  "private": true,
   "dependencies": {
-    "babel-preset-react": "latest",
-    "babelify": "latest",
-    "browserify-middleware": "latest",
-    "express": "latest",
-    "flux": "latest",
-    "keymirror": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "socket.io": "latest",
-    "socket.io-client": "latest"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
   },
-  "devDependencies": {
-    "eslint": "latest",
-    "eslint-plugin-react": "latest",
-    "gulp": "latest",
-    "gulp-eslint": "latest",
-    "gulp-connect": "latest",
-    "reactify": "latest"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
