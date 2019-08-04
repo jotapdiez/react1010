@@ -1,0 +1,24 @@
+.pieceCointainer{
+	/* background-color: blue !important; */
+	/* border: 1px solid black; */
+	display: flex;
+	flex-direction: column;
+	margin: 20px 20px 20px 20px;
+}
+
+.piece_row{
+	/* border: 1px solid red; */
+	display: flex;
+	flex-direction: row;
+	/* width: 100px; */
+}
+.piece_column{
+	/* border: 1px solid yellow; */
+	width: 25px;
+	height: 25px;
+}
+.piece_block{
+	width: 100%;
+	height: 100%;
+	border: 1px dotted black;
+}

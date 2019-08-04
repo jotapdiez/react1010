@@ -1,0 +1,32 @@
+/* .score-text{
+    animation:score-text-keyframes--bounce .8s ease-out;
+} */
+.score-text-enter{
+    opacity: 0;
+}
+.score-text-enter-active{
+    opacity: 1;
+    /* transition: opacity 100ms linear; */
+    animation:score-text-bounce .8s ease-out;
+    width: min-content;
+}
+/* .score-text--bounce{
+  animation:Score-keyframes--bounce .8s ease-out
+} */
+@keyframes score-text-bounce{
+  /* 0%,to { transform:rotate(0) }
+  10% { transform:scale(1.1) }
+  20% { transform:rotate(4deg) translateY(-12px) }
+  40% { transform:rotate(2deg) translateY(0) }
+  60% { transform:rotate(-2deg) translateY(-8px) }
+  80% { transform:rotate(-1deg) translateY(0) } */
+  0%,to { transform:scale(1) }
+  50% { transform:scale(5) }
+}
+/* .score-text-exit{
+    opacity: 1;
+}
+.score-text-exit-active{
+    opacity: 0;
+    transition: opacity 100ms linear;
+} */

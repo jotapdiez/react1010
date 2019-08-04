@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Board from './Board'
+import Score from './Score'
+import NextPieces from './NextPieces'
+// import logo from './logo.svg';
+import './styles.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return (<div className="row">
+    <div className="col-md-4">
+      <h1>React<span className="text-danger">10</span><span className="text-primary">10</span>!</h1>
+        <Score/>
+        <NextPieces/>
     </div>
-  );
+    <div className="col-md-8">
+      <Board />
+    </div>
+  </div>);
 }
 
 export default App;
