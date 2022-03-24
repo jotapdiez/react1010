@@ -1,7 +1,7 @@
 // var keyMirror = require('keymirror');
 
-export const ROWS =  9;
-export const COLS = 15;
+export const ROWS =  10;
+export const COLS = 10;
 export const BLOCK_HEIGHT = 50;
 export const BLOCK_WIDTH  =  5;
 export const ALLOWED_DROP_EFFECT = 'move';

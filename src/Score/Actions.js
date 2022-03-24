@@ -4,5 +4,5 @@ export const add = points => ({
 });
 
 export const drop = () => ({
-    type: 'score_drop'
+    type: 'add_movement'
 });

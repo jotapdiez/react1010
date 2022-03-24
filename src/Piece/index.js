@@ -20,17 +20,19 @@ export default function Piece(props) {
 
     const onDragStart = (e) => {
 		e.persist();
+		// e.persist();
 		let event = e.nativeEvent;
-		event.dataTransfer.effectAllowed = ALLOWED_DROP_EFFECT;
-
 		var data = {
 			matrix: MATRIX_PIECES[props.index],
 			pickedFrom: pick,
 			id: props.id,
 			color: colorClass
 		};
-		event.dataTransfer.setData(DRAG_DROP_CONTENT_TYPE, JSON.stringify(data));
-		event.dataTransfer.dropEffect = "move";
+		e.dataTransfer.effectAllowed = ALLOWED_DROP_EFFECT;
+		e.dataTransfer.setData(DRAG_DROP_CONTENT_TYPE + "/" + JSON.stringify(data), '');
+		e.dataTransfer.dropEffect = ALLOWED_DROP_EFFECT;
+		// console.log('onDragStart:', event.dataTransfer)
+		// console.log('onDragStart:', event.dataTransfer.getData(DRAG_DROP_CONTENT_TYPE))
     };
 
     const selectPiecePortion = (row, column) => {
@@ -40,7 +42,7 @@ export default function Piece(props) {
         });
     };
 
-	return (<div style={props.style} className="pieceCointainer" draggable='true' onDragStart={(e)=>{e.persist(); onDragStart(e);}}>
+	return (<div style={props.style} className="pieceCointainer" draggable='true' onDragStart={onDragStart}>
 				{MATRIX_PIECES[props.index].map((row, r) => {
 					// console.log('Color: ' + colorClass, ' - length: ', COLORS.length);
 

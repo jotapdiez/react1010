@@ -1,40 +1,34 @@
 import React, {useState,useEffect} from 'react'
 import { useSelector } from 'react-redux';
-// import { createSelector } from 'reselect'
-import { CSSTransition } from 'react-transition-group';
 import './score.css';
 
-// const storeSelector = createSelector(
-//     score => state.todos,
-//     drops => state.drops
-// );
-
 export default function Score(){
-    // const { score, drops } = useSelector(storeSelector);
-    const { score, drops } = useSelector(store => {
-        console.log('store:', store);
+    const { score, moves } = useSelector(store => store.score );
+    const [ scoreAnimation, setScoreAnimation ] = useState(false);
+    const [ movesAnimation, setMovesAnimation ] = useState(false);
 
-        return store.score;
-    });
-    const [anim, setAnim] = useState(false);
     useEffect(()=>{
-        setAnim(true);
+        setScoreAnimation(true);
+        setTimeout(e => setScoreAnimation(false), 1000);
     }, [score]);
+
+    useEffect(()=>{
+        setMovesAnimation(true);
+        setTimeout(e => setMovesAnimation(false), 1000);
+    }, [moves]);
+
     return (<div className="score">
-        <span>
-            <strong>Puntaje:</strong>
-        </span>
-        <CSSTransition
-            in={anim}
-            timeout={100}
-            onEntered={() => setAnim(false)}
-            classNames="score-text">
-            <div className="score-text">{score}</div>
-        </CSSTransition>
-        <br />
-        <span>
-            <strong>Movimientos:</strong>
-        </span>
-            <div>{drops}</div>
+        <div className='points'>
+            <span>
+                <strong>Puntaje:</strong>
+            </span>
+            <div className={"score-text" + (scoreAnimation ? " changed" : '')}>{score}</div>
+        </div>
+        <div className='moves'>
+            <span>
+                <strong>Movimientos:</strong>
+            </span>
+            <div className={"moves-text" + (scoreAnimation ? " changed" : '')}>{moves}</div>
+        </div>
     </div>);
 }

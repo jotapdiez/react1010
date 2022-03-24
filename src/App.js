@@ -6,13 +6,15 @@ import NextPieces from './NextPieces'
 import './styles.css';
 
 function App() {
-  return (<div className="row">
-    <div className="col-md-4">
-      <h1>React<span className="text-danger">10</span><span className="text-primary">10</span>!</h1>
+  return (<div className="container">
+    <div className="left-container">
+      <div className="score-container">
+        <h1>React<span className="text-danger">10</span><span className="text-primary">10</span>!</h1>
         <Score/>
-        <NextPieces/>
+      </div>
+      <NextPieces/>
     </div>
-    <div className="col-md-8">
+    <div className="board-container">
       <Board />
     </div>
   </div>);

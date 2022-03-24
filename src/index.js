@@ -8,9 +8,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 import store from './store';
 import { createStore } from 'redux';
 
-ReactDOM.render(<Provider store={createStore(store)}>
+ReactDOM.render(<React.StrictMode>
+        <Provider store={createStore(store)}>
             <App />
-        </Provider>, document.getElementById('root'));
+        </Provider>
+    </React.StrictMode>, document.getElementById('root'));
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

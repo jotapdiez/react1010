@@ -1,32 +1,35 @@
-/* .score-text{
-    animation:score-text-keyframes--bounce .8s ease-out;
-} */
-.score-text-enter{
-    opacity: 0;
+.score{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
-.score-text-enter-active{
-    opacity: 1;
-    /* transition: opacity 100ms linear; */
-    animation:score-text-bounce .8s ease-out;
+
+@media only screen and (max-width: 840px) {
+    .score {
+        width: 50%;
+    }
+}
+.score .points{
+
+}
+.moves-text.changed{
+    animation:moves-text-bounce .3s ease-out;
     width: min-content;
 }
-/* .score-text--bounce{
-  animation:Score-keyframes--bounce .8s ease-out
-} */
+.score-text{
+    /* opacity: 0; */
+}
+.score-text.changed {
+    /* opacity: 1; */
+    /* transition: opacity 100ms linear; */
+    animation:score-text-bounce .3s ease-out;
+    width: min-content;
+}
 @keyframes score-text-bounce{
-  /* 0%,to { transform:rotate(0) }
-  10% { transform:scale(1.1) }
-  20% { transform:rotate(4deg) translateY(-12px) }
-  40% { transform:rotate(2deg) translateY(0) }
-  60% { transform:rotate(-2deg) translateY(-8px) }
-  80% { transform:rotate(-1deg) translateY(0) } */
-  0%,to { transform:scale(1) }
-  50% { transform:scale(5) }
+    0%,100% { transform:scale(1) }
+    50% { transform:scale(2); color:green; }
 }
-/* .score-text-exit{
-    opacity: 1;
+@keyframes moves-text-bounce{
+    0%,100% { transform:scale(1) }
+    50% { transform:scale(2); color:red; }
 }
-.score-text-exit-active{
-    opacity: 0;
-    transition: opacity 100ms linear;
-} */

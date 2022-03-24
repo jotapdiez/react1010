@@ -1,98 +1,55 @@
-
-.nextPieces{
-	/* display: 'inline-block'; */
+.container{
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.nextPieces-enter {
-  	opacity: 0;
-}
-.nextPieces-enter-active {
-	opacity: 1;
-	transition: opacity 500ms ease-in;
-}
-.nextPieces-exit {
-  	opacity: 1;
-}
-.nextPieces-exit-active {
-	opacity: 0;
-	transition: opacity 500ms ease-in;
-}
-
-
-/* .column.empty{ */
-.column{
-	background-color: wheat;
-}
-
-.column.piece {
-	background-color: #eee;
-	/* border: 2px solid green; */
-}
-
-.column.dragEnterOk{
-	background-color:green !important;
-}
-.column.dragEnterWrong{
-	background-color:red !important;
-}
-
-
-.column{
-	/* border: 1px solid black; */
-	/* background-color: wheat; */
-	display: inline-block;
-	width: 60px;
-	height: 42px;
-	margin: 1px;
-	border-radius: 10px;
-}
-
-.column-enter {
-	  /* opacity: 0; */
-	  transform: scale(0.1);
-	  /* width: 1px;
-	  height: 1px; */
-}
-.column-enter-active {
-	/* opacity: 1; */
-	transition: transform 100ms linear;
-	/* width: 100%;
-	height: 100%; */
-	transform: scale(1);
-}
-.column-exit {
-	  /* opacity: 1; */
-	  transform: scale(1);
-}
-.column-exit-active {
-	/* opacity: 0; */
-	transform: scale(0.1);
-	transition: transform 100ms linear;
-}
-
-.board_row{
-	/* border: 1px solid blue; */
-	/* background-color: burlywood; */
+.main-container {
 	display: flex;
-	flex-direction: row;
+	justify-content: center;
 }
-.board{
+.board-container {
+	justify-content: center;
+	display: flex;
+}
+.left-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	min-width: 30%;
+	max-width: 30%;
+}
+.left-container > div {
+	flex-basis: fit-content;
+}
+.score-container {
+	flex-basis: fit-content;
 	display: flex;
 	flex-direction: column;
-	/* width: 600px; */
-	height: auto;
-	border-radius: 10px;
-	background-color: burlywood;
-	padding: 10px;
+	align-items: center;
+	justify-content: center;
+}
+/* .nextPieces-container {
+	flex-basis: fit-content;
+} */
+
+@media only screen and (max-width: 840px) {
+	.main-container {
+		flex-direction: column;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.main-container .left-container {
+		flex-direction: unset;
+	}
+
+	.left-container {
+		min-width: unset;
+		max-width: unset;
+	}
 }
 
-.nextPieces div.board{
-	margin-left: 5px;
-}
-
-.nextPieces .piece{
-	background-color:red;
-	border: 1px dotted;
-}
+/* @media only screen and (max-width: 767px) {
+	.main-container .left-container {
+		flex-wrap: unset;
+	}
+} */

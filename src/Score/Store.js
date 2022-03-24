@@ -1,5 +1,5 @@
 const initial ={
-    drops: 0,
+    moves: 0,
     score: 0
 };
 
@@ -12,10 +12,10 @@ export default function reduce(state = initial, action) {
         case 'score_add':
             result.score += action.payload;
             return result;
-        case 'score_drop':
+        case 'add_movement':
             // let result = Object.assign({}, state);
-            ++result.drops;
-            console.log('result: ', result);
+            ++result.moves;
+            // console.log('result: ', result);
 
             return result;
         default:
